@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabbench"
+dynamic = ["version"]
+authors = [
+    { name = "Neuralk AI Research Team", email = "alex@neuralk-ai.com" },
+    { name = "Alexandre Pasquiou", email = 'alex@neuralk-ai.com'},
+    { name = "Alexandre Abraham", email = 'alexandre.abraham@neuralk-ai.com'},
+    { name = "Frosso Papanastasiou", email = 'frosso.papanastasiou@neuralk-ai.com'},
+]
+maintainers = [
+    { name = "Neuralk AI Research Team", email = "alex@neuralk-ai.com" },
+]
+description = "Datasets and scripts for tabular benchmark."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "openml>=0.15.1",
+    "neuralk_foundry_ce>=0.0.2",
+]
+
+[project.urls]
+Homepage = "https://neuralk-ai.com"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/Neuralk-AI/tabbench"
+
+[tool.setuptools]
+packages = { find = { where = ["src"] } } # If your packages are under src/
+
+[tool.setuptools.package-dir]
+"" = "src" # Maps the root package namespace to the "src" directory
+
+[tool.setuptools.dynamic]
+# If you want to dynamically set version or dependencies from other files
+version = {file = "src/tabbench/VERSION.txt"}
+# dependencies = {file = ["requirements.txt"]}
